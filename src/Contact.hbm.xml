@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="myapp.model.Contact" table="contact_display"> /*mapping contact_display to Contact.java*/
+        <id name="employee_id" type="string" column="employee_id">
+            <generator class="assigned" />
+           
+        </id>
+        /* name should match with contact.java string name and column must match with column in mysql */ 
+        <property name="employee_Name" type="string" column="employee_Name" not-null="true" />
+        <property name="home_Num" type="string" column="home_Num"  not-null="true" />
+        <property name="mobile_Num" type="string" column="mobile_Num" not-null="true" />
+        <property name="office_Num" type="string" column="office_Num"  not-null="true" />
+        <property name="email" type="string" column="email"  not-null="true" />
+    </class>
+   
+</hibernate-mapping>
